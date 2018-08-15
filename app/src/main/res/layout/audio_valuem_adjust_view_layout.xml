@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/hint_background_selector"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp">
+    
+
+    <Button
+        android:id="@+id/bt_valuem_subtract"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/audio_valuem_subtract_selector"
+        android:padding="5dp" />
+
+    <SeekBar
+        android:id="@+id/sb_valuem_progress"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:max="10"
+        android:progress="5"
+        
+        />
+
+    <TextView
+        android:id="@+id/tv_valuem_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:gravity="center"
+        android:text="5"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/bt_valuem_plus"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/audio_valuem_plus_selector"
+        android:padding="5dp" />
+
+</LinearLayout>

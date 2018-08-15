@@ -1,0 +1,57 @@
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:gravity="center"
+ 	android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+    <TextView
+        android:layout_weight="1"
+         android:layout_width="match_parent"
+    	 android:layout_height="wrap_content"
+    	  android:text="请输入密码"
+    	  android:layout_alignParentTop="true"
+    	  android:layout_centerHorizontal="true"
+    	  android:textSize="30dp"
+    	  android:textColor="@android:color/holo_blue_dark"
+    	  android:gravity="center"
+    	  android:padding="5dp"
+    	  android:layout_marginTop="10dp"
+         />
+ 
+
+ 	<EditText 
+	 
+      android:layout_weight="1"
+     android:id="@+id/et_enter_password"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:inputType="textPassword"
+     android:layout_centerInParent="true"
+     android:layout_marginLeft="40dp"
+     android:layout_marginRight="40dp"
+     android:layout_marginTop="20dp"
+     android:textSize="30dp"
+     android:maxLength="10"
+     android:gravity="center"
+     android:padding="5dp"
+     />
+ 	 <requestFocus />
+ 	 
+ 	<Button 
+ 	  android:padding="10dp"
+ 	  android:layout_weight="1"
+     android:id="@+id/bt_enter_password"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="确定"
+     android:background="@drawable/selector_btn_enter_"
+     android:textSize="30dp"
+     android:gravity="center"
+     android:textColor="@android:color/holo_blue_dark"
+     
+     />
+ 
+
+</LinearLayout>

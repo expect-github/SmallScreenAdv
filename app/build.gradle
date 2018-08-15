@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.hyt.advsmallscreen"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.8.1'
+// https://mvnrepository.com/artifact/com.squareup.okio/okio
+    compile group: 'com.squareup.okio', name: 'okio', version: '1.15.0'
+    
+    "// https://mvnrepository.com/artifact/commons-codec/commons-codec"
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
+// https://mvnrepository.com/artifact/com.google.guava/guava
+    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+
+    compile 'com.google.code.gson:gson:2.2.4'
+
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
+    }
+    
+    
+}

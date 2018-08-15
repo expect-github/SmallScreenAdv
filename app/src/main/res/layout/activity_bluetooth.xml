@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+     >
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择您的蓝牙设备"
+        android:textColor="@color/hint_text_blue"
+        android:textSize="30dp"
+        />
+    <ListView
+        android:id="@+id/lv_bles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        >
+    </ListView>
+    <Button
+        android:id="@+id/bt_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_title"
+        android:text="配置完成"
+        android:layout_alignTop="@+id/tv_title"
+        android:layout_above="@+id/lv_bles"
+        />
+
+</RelativeLayout>

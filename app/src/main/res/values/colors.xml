@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="hint_camera">#305498ff</color>
+
+    <color name="hint_text">#5398ff</color>
+
+    <color name="hint_text_blue">#59b7ff</color>
+    <color name="hint_white_">#ffffff</color>
+
+    <color name="frame_side">#73c2ff</color>
+
+    <color name="big_background_">#7bc6ff</color>
+
+    <color name="text_color">#2c2c2c</color>
+
+    <color name="device_text_color">#868686</color>
+
+    <color name="device_text_background_color">#70ffffff</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name = "button_blue">#4B7AFF</color>
+
+    <color name = "red">#ff0000</color>
+    <color name = "yellow">#ffd800</color>
+    <color name = "green">#00ff2a</color>
+    <color name = "blue">#0030ff</color>
+    <!--红#ff0000，黄#ffd800，绿#00ff2a，蓝#0030ff-->
+
+    <color name = "material_grey_300">#0030ff</color>
+
+</resources>

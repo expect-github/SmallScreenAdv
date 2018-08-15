@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_use_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:ems="10"
+                android:gravity="center"
+                android:text="数据库服务器IP:"
+                android:textSize="25dp" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="请输入数据库服务器IP"
+                    android:text=""
+
+
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_port"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="数据库服务器端口号:"
+                    android:textSize="25dp"
+
+                    />
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_port"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:id="@+id/et_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="请输入服务器端口"
+                    android:text="7002" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text"
+
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_gongan_sql_name"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="35dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="服务器数据库名称："
+                    android:textSize="25dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_gongan_sql_name"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_sql_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="请输入您的服务器数据库名称"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="数据库服务器账户名:"
+                    android:textSize="25dp"
+
+                    />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_account"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:gravity="bottom"
+                    android:hint="请输入数据库服务器账户名"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="35dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="数据库服务器密码:"
+
+                    android:textSize="25dp" />
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_password"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/view"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="请输入数据库服务器密码"
+                    android:inputType="textPassword"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_aql_name"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="35dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="数据库名:"
+                    android:textSize="25dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_aql_name"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_form_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="默认为 gahotle" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_form_name"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="35dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="公安接口注册码："
+
+                    android:textSize="25dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_form_name"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_register_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="请输入您的注册码"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_gongan_de_name"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="35dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="公安接口设备号："
+
+                    android:textSize="25dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_gongan_de_name"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et__gongan_de_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="请输入您的公安接口设备号"
+                    android:text="" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_face_acount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="人脸识别账号:"
+                    android:textSize="25dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_000000"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_face_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:hint="请输入人脸识别账号" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_face_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_0000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="人脸识别密码:"
+                    android:textSize="25dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_0000"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:id="@+id/et_FasePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+
+                    android:hint="请输入人脸识别密码"
+                    android:inputType="textPassword" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/tv_"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="25dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hint_text" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/frame_blue_side_shape"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_kind_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_break"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="退出" />
+
+            <CheckBox
+                android:id="@+id/cb_usID_reader"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:text="使用身份验证"
+                android:visibility="gone" />
+
+
+            <CheckBox
+                android:id="@+id/cb_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="确认配置自动跳过"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/cb_video"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="视频展示"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="确认" />
+
+            <Button
+                android:id="@+id/bt_config_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="更多设置" />
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_face_slect"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/frame_blue_side_shape"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        >
+
+        <RadioGroup
+            android:id="@+id/rg_face_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="请选择人脸识别:"
+                android:textColor="@color/blue"
+                android:textSize="20dp" />
+
+            <RadioButton
+
+                android:id="@+id/rb_hx"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="海鑫科金"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/rb_smy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="尚明月"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/rb_senstum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="商汤"
+                android:visibility="visible" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_id_read"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/frame_blue_side_shape"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        >
+
+        <RadioGroup
+            android:id="@+id/rg_id_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择读卡器类型"
+                android:textColor="@color/blue"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/cb_usb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="USB"
+                android:visibility="visible"
+                android:checked="false"
+                />
+            <RadioButton
+                android:id="@+id/cb_serial"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="串口"
+                android:visibility="visible"
+                android:layout_marginLeft="10dp"
+                android:checked="false"
+
+                />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/cb_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="蓝牙"
+                android:visibility="visible"
+                android:checked="false"
+                />
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setblue"
+                android:text="配置蓝牙"
+                android:layout_marginRight="20dp"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_config_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_config_t"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:ems="10"
+                android:gravity="center"
+                android:text="本机设备ID:"
+                android:textSize="25dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/tv_config_t"
+                android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/hint_text" />
+
+            <EditText
+                android:id="@+id/et_device_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:hint="请输入本机ID"
+
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

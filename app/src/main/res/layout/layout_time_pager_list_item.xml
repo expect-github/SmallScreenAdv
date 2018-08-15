@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:paddingBottom="10dp"
+    >
+
+    <CheckBox
+        android:id="@+id/cb_pager_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:id="@+id/tv_time_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:textSize="22dp"
+        android:layout_marginLeft="5dp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time_start"
+            style="@style/setting_HintText_sty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time_adv"
+            android:layout_marginTop="10dp"
+            android:ems="5"
+            android:text="开始时间：" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            style="@style/setting_HintText_sty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time_start"
+            android:ems="5"
+            android:text="结束时间："
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="3dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_time_start"
+            android:layout_width="110dp"
+            android:layout_height="38dp"
+            android:layout_alignBottom="@+id/tv_end_time"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tv_end_time"
+            android:background="@drawable/frame_blue_side_shape"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_time_hint_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@color/frame_side"
+                android:textSize="22dp" />
+
+            <CheckBox
+                android:id="@+id/cb_time_start"
+                android:layout_width="17dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_time_hint_st"
+                android:background="@drawable/selector_alow_index"
+                android:button="@null" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_time_end"
+            android:layout_width="110dp"
+            android:layout_height="38dp"
+            android:layout_alignBottom="@+id/tv_time_start"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tv_time_start"
+            android:background="@drawable/frame_blue_side_shape"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_time_hint_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:00"
+                android:textColor="@color/frame_side"
+                android:textSize="22dp" />
+
+            <CheckBox
+                android:id="@+id/cb_time_end"
+                android:layout_width="17dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_time_hint_end"
+                android:background="@drawable/selector_alow_index"
+                android:button="@null" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

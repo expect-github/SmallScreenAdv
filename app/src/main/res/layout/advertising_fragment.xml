@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+ 
+    <com.huanyang.imagelibrary.pager.custom.LooperPager
+        android:id="@+id/vp_advertising"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.huanyang.imagelibrary.pager.custom.LooperPager>
+
+
+    <ImageView
+        android:id="@+id/iv_bd_adv"
+        android:layout_width="31dp"
+        android:layout_height="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:src="@mipmap/wap_ads_2x"
+        android:alpha="0.5"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/iv_bd_hand"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="18dp"
+        android:src="@mipmap/wap_hand_2x"
+        android:visibility="gone"
+        android:alpha="0.5"
+        />
+
+
+
+
+</RelativeLayout>

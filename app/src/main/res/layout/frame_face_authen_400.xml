@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <RelativeLayout
+        android:layout_width="359dp"
+        android:layout_height="273dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/face_background_selector">
+
+
+        <TextView
+            android:id="@+id/tv_discern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/sf_face"
+
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="相似度："
+
+            android:textSize="12dp" />
+
+        <TextView
+
+            android:id="@+id/tv_discern_body"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/tv_discern"
+            android:layout_alignBottom="@+id/tv_discern"
+            android:layout_toEndOf="@+id/tv_discern"
+            android:layout_toRightOf="@+id/tv_discern"
+            android:gravity="center"
+            android:text="100%"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:id="@+id/tv_statue"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_discern_body"
+
+            android:layout_alignBottom="@+id/tv_discern_body"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/tv_discern_body"
+            android:layout_toRightOf="@+id/tv_discern_body"
+            android:gravity="center"
+            android:text="识别状态："
+            android:textSize="12dp" />
+
+        <TextView
+
+            android:id="@+id/textView2"
+
+            android:layout_width="282dp"
+            android:layout_height="43dp"
+            android:layout_alignParentTop="true"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/hint_background_shap"
+            android:gravity="center_vertical"
+            android:text="正在进行人脸识别，请抬头正对摄像头"
+            android:textSize="14dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_inform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignStart="@+id/sf_face"
+
+            android:layout_below="@+id/sf_face"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentStart="true"
+                android:text="姓名:"
+                android:textColor="@color/hint_text"
+
+                android:textSize="11dp" />
+
+
+            <TextView
+                android:id="@+id/tv_name_body"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_alignBottom="@+id/tv_name"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@+id/tv_name"
+                android:ems="5"
+                android:text="张三李四"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBottom="@+id/tv_name_body"
+                android:layout_alignParentTop="true"
+
+                android:layout_toEndOf="@+id/tv_name_body"
+                android:text="姓别:"
+                android:textColor="@color/hint_text"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tv_sex_body"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBottom="@+id/tv_sex"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@+id/tv_sex"
+                android:ems="2"
+                android:text="男"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_sex_body"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/tv_sex_body"
+                android:text="身份证号码:"
+                android:textColor="@color/hint_text"
+
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tv_card_number_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toEndOf="@+id/tv_card_number"
+                android:ems="10"
+                android:text="321182197409262910x"
+                android:textSize="11dp" />
+
+
+        </RelativeLayout>
+
+        <com.huanyang.underlayer.FaceComparison.custom.FaceDiscernView
+
+            android:id="@+id/sf_face"
+            android:layout_width="274dp"
+            android:layout_height="165dp"
+            android:layout_alignParentStart="true"
+
+            android:layout_below="@+id/tv_discern"
+            android:layout_gravity="center_horizontal"
+
+
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="6dp" />
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="57dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/tv_02"
+            android:layout_below="@+id/tv_02"
+            android:background="@color/material_grey_300"
+
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_head_pic"
+
+            android:layout_width="57dp"
+            android:layout_height="70dp"
+            android:layout_alignLeft="@+id/tv_01"
+            android:layout_below="@+id/tv_01"
+
+            android:background="@color/material_grey_300"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_02"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/sf_face"
+
+
+            android:layout_marginLeft="6dp"
+            android:layout_toEndOf="@+id/sf_face"
+            android:text="身份证照片："
+            android:textSize="9dp"
+            android:textColor="#5e5e5e"
+            />
+
+        <TextView
+
+            android:id="@+id/tv_time"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_above="@+id/sf_face"
+            android:layout_alignStart="@+id/tv_02"
+            android:gravity="center"
+            android:text="60s"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp" />
+
+        <TextView
+
+            android:id="@+id/tv_statue_body"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="正在识别中。。"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14dp"
+            android:layout_alignBaseline="@+id/tv_time"
+            android:layout_alignBottom="@+id/tv_time"
+            android:layout_toEndOf="@+id/tv_statue" />
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人脸识别照片："
+            android:layout_marginTop="2dp"
+            android:textSize="9dp"
+            android:textColor="#5e5e5e"
+            android:layout_below="@+id/iv_head"
+            android:layout_alignStart="@+id/iv_head" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
